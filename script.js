@@ -12,7 +12,7 @@ onClick.addEventListener('click', function() {
     // console.log(click);
     setTimeout(() => {
         document.querySelector(".after-anim").classList.add("after-anim-anim");
-    }, 1000);
+    }, 2000);
     // alert("jhe")
 })
 
