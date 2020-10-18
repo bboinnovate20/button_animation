@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    /* width: 500px; */
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.main-body {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #490068;
+    border: 1px solid transparent;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline: none;
+    position: relative;
+    box-shadow: 1px 1px 20px #49006894;
+    overflow: hidden;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #4900683d;
+    color: #490068;
+}
+
+.btn-anim {
+    animation: slideAnim .3s linear;
+    animation-delay: 2s;
+}
+
+@keyframes slideAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(50);
+    }
+}
+
+slideAnim .btn:hover {
+    background-color: #7200a3;
+}
+
+.plane {
+    width: 3rem;
+    position: absolute;
+    right: 70;
+    opacity: 0;
+    /* right: 430; */
+    top: 20;
+    transform: rotate(10deg);
+    display: none;
+    fill: #490068;
+    /* transform: rotate(80deg); */
+}
+
+.when-clicked {
+    position: absolute;
+    background-color: white;
+    top: -2;
+    width: 100%;
+    left: 0;
+    bottom: -2;
+    color: #490068;
+    padding: 10px;
+    /* transform: translateX(-500px); */
+    display: none;
+}
+
+.when-clicked-anim {
+    display: block;
+    animation: w-c-anim 1s linear;
+}
+
+@keyframes w-c-anim {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+.plane-anim {
+    display: block;
+    animation: plane-anim 1s linear;
+}
+
+@keyframes plane-anim {
+    0% {
+        /* right: 450; */
+        width: 1rem;
+        top: 100;
+        transform: rotate(80deg);
+        opacity: 1;
+    }
+    10% {
+        right: 550;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.after-anim {
+    /* display: none; */
+    background-color: #a205e6;
+    position: absolute;
+    /* animation: ; */
+    /* padding: 30rem; */
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    padding-top: 40vh;
+    /* padding: 50vh; */
+    /* width: 100vw; */
+    /* height: 200vh; */
+    color: white;
+    display: none;
+}
+
+.after-anim-anim {
+    display: block;
+    animation: after-anim 1s linear;
+}
+
+.after-anim h1 {
+    animation: title 2s linear;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+        transform: translateY(-20);
+    }
+}
+
+@keyframes after-anim {
+    from {
+        transform: scale(0);
+        border-radius: 100%;
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        border-radius: 0%;
+        opacity: 1;
+    }
+}
+
+.anim-header {
+    animation: animHeader 2s linear;
+}
+
+@keyframes animHeader {
+    0% {
+        transform: translateY(-20px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+}
